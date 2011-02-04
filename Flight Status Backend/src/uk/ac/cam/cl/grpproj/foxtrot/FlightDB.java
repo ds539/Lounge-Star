@@ -10,15 +10,10 @@ public class FlightDB extends SQLiteOpenHelper {
 	public static final int DATABASE_VERSION = 2;
 	public static final String DATABASE_NAME = "loungestar";
 	public static final String DATABASE_TABLE_NAME = "flightstats";
-	public static final String FLIGHT_NO = "flightNo";
-	public static final String EXPECTED_TIME = "expectedTime";
-	public static final String DESTINATION = "destination";
-	public static final String AIRPORT = "airport";
-	public static final String GATE_NO = "gateNo";
 	private static final String DATABASE_TABLE_CREATE =
 		"CREATE TABLE " + DATABASE_TABLE_NAME + " (" +
-		FLIGHT_NO + " TEXT, " +
-		EXPECTED_TIME + " DATETIME, " + AIRPORT + " TEXT, " + DESTINATION + " TEXT, " + GATE_NO + " TEXT);";
+		Flights.FLIGHT_NO + " TEXT, " +
+		Flights.EXPECTED_TIME + " DATETIME, " + Flights.AIRPORT + " TEXT, " + Flights.DESTINATION + " TEXT, " + Flights.GATE_NO + " TEXT);";
 
 	public FlightDB(Context context) {
 		super(context, DATABASE_NAME, null, DATABASE_VERSION);
